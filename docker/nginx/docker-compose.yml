@@ -19,4 +19,4 @@ services:
 
 networks:
   web:
-    external: false
+    external: true
