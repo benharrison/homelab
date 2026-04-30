@@ -1,0 +1,6 @@
+services:
+  nginx:
+  vaultwarden:
+networks:
+  web:
+    external: true
