@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: unless-stopped
+
+    environment:
+      WEBSOCKET_ENABLED: "true"
+      SIGNUPS_ALLOWED: "false"   # disable public signups
+      ADMIN_TOKEN: "your-super-secret-admin-token"
+
+    volumes:
+      - ./data:/data
+
+    ports:
+      - "8080:80"
